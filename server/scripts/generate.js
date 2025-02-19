@@ -5,3 +5,7 @@ const { bytesToHex } = require("@noble/hashes/utils");
 const privateKey = secp256k1.utils.randomPrivateKey();
 
 console.log("Private Key:", bytesToHex(privateKey));
+
+const publicKey = secp256k1.getPublicKey(privateKey);
+
+console.log("public Key:", bytesToHex(publicKey))
